@@ -12,9 +12,10 @@ public class Flower : MonoBehaviour
     public int BuyPrice => data_flower != null ? data_flower.BuyPrice : 0;
     public int SellPrice => data_flower != null ? data_flower.SellPrice : 0;
 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         InitializeCharacteristics();
     }
 
