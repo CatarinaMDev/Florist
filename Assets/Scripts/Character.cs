@@ -2,19 +2,33 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] protected float movementSpeed = 2f;
+    protected Rigidbody2D rb;
+    protected Vector2 movementDirection;
+
+    protected virtual void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
-    void Movement()
+    protected virtual void Update()
     {
-
+        GetDirection();
     }
 
-    void Interaction()
+    protected virtual void FixedUpdate()
     {
+        if (rb != null)
+        {
+            rb.linearVelocity = movementDirection * movementSpeed;
+        }
+    }
 
+    protected virtual void GetDirection()
+    {
+    }
+
+    protected virtual void Interact()
+    {
     }
 }

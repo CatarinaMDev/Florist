@@ -1,35 +1,30 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+
 public class Player : Character
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private SpriteRenderer spriteRenderer;
+
+    protected override void Start()
     {
-        
+        base.Start();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InitializePlayer(Data_Character data)
     {
-        if (Keyboard.current != null && Keyboard.current.wKey.wasPressedThisFrame)
-        {
-            Debug.Log("Pressed W-> Move up");
-            
-        }
-        if (Keyboard.current != null && Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            Debug.Log("Pressed A-> Move left");
-           
-        }
-        if (Keyboard.current != null && Keyboard.current.sKey.wasPressedThisFrame)
-        {
-            Debug.Log("Pressed S-> Move down");
-          
-        }
-        if (Keyboard.current != null && Keyboard.current.dKey.wasPressedThisFrame)
-        {
-            Debug.Log("Pressed D -> Move right");
-            
-        }
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+
+        movementSpeed = data.movementSpeed;
+        spriteRenderer.sprite = data.characterSprite;
+    }
+
+    protected override void GetDirection()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        movementDirection = new Vector2(moveX, moveY).normalized;
     }
 }
