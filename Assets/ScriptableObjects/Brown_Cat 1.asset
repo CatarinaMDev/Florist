@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb367a1724e024b8fdb6d1ed6262d0, type: 3}
+  m_Name: Brown_Cat 1
+  m_EditorClassIdentifier: Assembly-CSharp::Data_Character
+  characterPrefab: {fileID: 9097061688732935668, guid: cd73ddb3a84d6ef48ba1aa92f4be9bb8, type: 3}
+  characterSprite: {fileID: -4260243128257278945, guid: f745822ddd95f3b468e0196b94cec5e1, type: 3}
+  <nameOfCharacter>k__BackingField: White Cat
+  <movementSpeed>k__BackingField: 2
