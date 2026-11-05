@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7616783123648399850}
   m_Layer: 0
   m_Name: Player_Base
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   movementSpeed: 2
+  playerInventory: {fileID: 11400000, guid: e73262fe6a1f7ac459cec4c1a363e501, type: 2}
 --- !u!212 &-5955380003460135693
 SpriteRenderer:
   serializedVersion: 2

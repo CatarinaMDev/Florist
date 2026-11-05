@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Flower
+  - Client
+  - Box
+  - PlantationSpot
   layers:
   - Default
   - TransparentFX
